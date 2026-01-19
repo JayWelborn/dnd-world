@@ -1,2 +1,8 @@
+# python stuff
 ./venv/
 .python-version
+*__pycache__/
+
+# django stuff
+*.sqlite3
+
