@@ -1,3 +1,5 @@
+import uuid
+
 from django.db import models
 
 # Create your models here.
@@ -13,9 +15,13 @@ class BaseEntity(models.Model):
     """
 
     id = models.AutoField(primary_key=True)
-    uuid = models.UUIDField(unique=True)
+    uuid = models.UUIDField(unique=True, editable=False, default=uuid.uuid7)
     name = models.CharField(max_length=255)
     description = models.TextField()
 
     class Meta:
         abstract = True
+        indexes = [
+            models.Index(fields=['uuid', 'name'])
+        ]
+        ordering = ['name']
