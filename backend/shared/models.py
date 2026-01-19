@@ -25,3 +25,6 @@ class BaseEntity(models.Model):
             models.Index(fields=['uuid', 'name'])
         ]
         ordering = ['name']
+
+    def __str__(self):
+        return self.name

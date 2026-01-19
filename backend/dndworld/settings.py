@@ -121,3 +121,4 @@ STATIC_URL = 'static/'
 
 # User-Uploaded media (NPC images, Location maps)
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = 'media/'

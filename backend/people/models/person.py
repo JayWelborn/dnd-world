@@ -12,3 +12,6 @@ class Person(BaseEntity):
     dnd_class = models.TextField(max_length=255, blank=True, null=True)
     stat_block = models.URLField(blank=True, null=True)
     image = models.ImageField(upload_to='people/%Y/%m/%d', blank=True, null=True)
+
+    class Meta:
+        verbose_name_plural = 'People'
