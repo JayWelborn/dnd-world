@@ -11,3 +11,4 @@ class Location(BaseEntity):
     """
 
     parent = models.ForeignKey("Location", blank=True, null=True, on_delete=models.SET_NULL)
+    image = models.ImageField(upload_to="locations/%Y/%m/%d/", blank=True, null=True)
